@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.validation.constraints.Email;
 import java.time.LocalDateTime;
 
 @AllArgsConstructor
@@ -12,12 +13,12 @@ import java.time.LocalDateTime;
 @Data
 public class Admin {
     @Id
-    private Long AdminId;
-
-    private String AdminName;
-    private String Email;
-    private String Password;
-    private LocalDateTime CreatedAt;
-    private LocalDateTime UpdatedAt;
+    private Long adminId;
+    private String adminName;
+    @Email
+    private String email;
+    private String password;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 
 }
